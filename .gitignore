@@ -1,0 +1,12 @@
+mentoring.pdf
+*.aux
+*_latexmk
+*.fls
+*.log
+*.gz
+*.toc
+*svg-inkscape*
+*.dvi
+*.out
+*.ps
+*_temp.tex
