@@ -1,21 +1,22 @@
 \documentclass[
-    paper=A4,
+    paper=a4,
+    % fontsize=10pt,
     div=calc,
-    numbers=noendperiod
-    % twocolumn
+    numbers=noendperiod,
+    twocolumn,
 ]{scrartcl}
-
-% Infos:
-% 3 din a4 seiten
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
+
 \usepackage{microtype}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
-
+\usepackage{flushend}
 \usepackage[headsepline]{scrlayer-scrpage}
+
+\usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{pdfpages}
 
@@ -31,8 +32,7 @@
 \titlehead{Hochschule Karlsruhe\\Univerity of Applied Sciences}
 \subject{Studiengang Elektro- und Informationstechnik}
 \title{Mentoringbericht Wintersemster 2022/23}
-% \subtitle{Wintersemster }
-% \author{Jan Hoegen\thanks{Matrikelnummer: 82358. E-Mail: \href{mailto:jan.hoegen@web.de}{jan.hoegen@web.de}}}
+% \subtitle{Wintersemster}
 \author{Jan Hoegen\\\href{mailto:jan.hoegen@web.de}{jan.hoegen@web.de}}
 \date{Erstellt am \today}
 % \publishers{xx}
@@ -40,6 +40,9 @@
 \ihead{Jan Hoegen}
 \chead{Mentoringbericht WS 22/23}
 \ohead{\today}
+
+\newcommand{\legend}[1]{\par\footnotesize\textbf{Legende}: #1\par}
+\newcommand{\gquotes}[1]{\glqq #1\grqq}
 
 \begin{document}
 
@@ -50,15 +53,13 @@
 \section{Rahmenbedingungen}
     Das Mentoringprogramm richtet sich an Erstsemesterstudentinnen und -Studenten an der Hochschule Karlsruhe im Studiengang Elektro- und Informationstechnik für das Wintersemster 2022/23. Organisiert wird es vom Zentrum für Lehrinnovation der HKA. Ziel ist es, den Studierenden den Einstieg ins Studium durch erfahrene Kommilitonen zu erleichtern.
 
-    Ich bin 23 Jahre alt, studiere Elektro- und Informationstechnik im zweiten Bachelorsemester, und nehme zum ersten Mal als Mentor an diesem Programm teil. Gemeinsam mit Raphael Hansjosten (6. Bachelorsemester) bilden wir ein Team und betreuen insgesamt elf Mentees. 
+    Ich bin 23 Jahre alt, studiere Elektro- und Informationstechnik im zweiten Bachelorsemester, und nehme zum ersten Mal als Mentor an diesem Programm teil. Gemeinsam mit Raphael Hansjosten (7. Bachelorsemester) bilden wir ein Team und betreuen insgesamt elf Mentees. 
 
     \subsection*{Vorkenntnisse}
         Raphael Hansjosten nimmt zum zweiten Mal als Mentor teil und studiert bereits seit 3 Jahren an der Hochschule, daher kann ich auf seinen großen Erfahrungsschatz und sein hochschulspezifisches Wissen zurückgreifen. 
 
         Obwohl ich über weniger Erfahrung über das Studium an der HKA verfüge, fühle ich mich dennoch gut vorbereitet, die Mentees in ihrem ersten Semester zu unterstützen. Dank meiner Vorkenntnisse als lizenzierter C-Trainer im Bereich Leistungssport Erwachsene Volleyball bin ich mit den Themen Mehrjahreszielsetzung, Planung und Umsetzung, sowie Wissensvermittlung gegenüber Jugendliche geübt.  
         Aufgrund meiner Werkstudententätigkeit im Rettungsdienst und Krankentransport Karlsruhe bin ich über psychische Probleme und ihre Anlaufstellen zur Selbsthilfe sensibilisiert.  
-        
-        % Ich bin lizenzierter C-Trainer im Bereich Leistungssport Erwachsene Volleyball, war drei Jahre Übungsleiter und Coach einer U20w im Volleyball und nehme aktuell im Wohnheim ein Amt ein. Außerdem arbeite ich als Werkstudent im Rettungsdienst und Krankentransport in Karlsruhe. Darüber hinaus liegt das erste Semester kurz hinter mir und ich konnte frische Erfahrungen sammeln.
  
 \section{Zielsetzung}
     Folgende Aufgaben wurden an die Mentoren formuliert:
@@ -74,51 +75,103 @@
     \end{itemize}
 
     Daraus entwickelten Raphael und ich folgende Ziele und einige Beispiele für unsere Mentoringarbeit:
-    \begin{description}
-        \item[Hilfe beim Ankommen und Zurechtfinden im Studium] Zugang zur Prüfungsanmeldung, Zuagng zu Fachschaftsdokumenten, Lerngruppen finden, Anmeldung zum Hochschulsport, \dots
-        \item [Probleme vorbeugen und Hilfestellung geben] Schieben von Klausuren, 
-        Anpassung von Semesterzielen und Wochenlernplänen, Möglichkeiten zur Selbsthilfe bei emotionalen Problemen, \dots
-        \item [Relevante Informationen und Tipps zur Organisation weitergeben] effektive Lernmethoden, Tipps zur guten Klausurvorbereitung, Vorlesungen priorisieren und effektiv Mitarbeiten, \dots
-    \end{description}
+
+    \subparagraph{Hilfe beim Ankommen und Zurechtfinden im Studium:}
+        Zugang zur Prüfungsanmeldung, Zugang zu Fachschaftsdokumenten, Lerngruppen finden, Anmeldung zum Hochschulsport, \dots
+
+    \subparagraph{Probleme vorbeugen und Hilfestellung geben:}
+        Tipps zum Schieben von Klausuren, Anpassung von Semesterzielen und Wochenlernplänen, Möglichkeiten zur Selbsthilfe bei psychischen Problemen, \dots
+
+    \subparagraph{Relevante Informationen und Tipps zur Organisation weitergeben:}
+        effektive Lernmethoden, Tipps zur guten Klausurvorbereitung, Vorlesungen priorisieren und effektiv mitarbeiten, \dots
 
 \section{Bericht und Reflexion der Mentoringtreffen}
-    Im Folgenden werden die einzelnen Treffen beschrieben und von mir reflektiert. Unterlagen zur Vor- und Nachbereitung der Treffen finden sich im Anhang \ref{sec:app}. 
+    Im Folgenden werden die einzelnen Treffen beschrieben und von mir reflektiert. Unterlagen zur Vor- und Nachbereitung der Treffen finden sich im Anhang \ref{sec:appendix}. 
 
     \subsection{Online-Treffen am 29. September 2022}
         Das online-get-together dauerte ca. \SI{30}{\minute}. Ich führte eine kurze Vorstellungsrunde mit den initial drei teilnehmenden Mentees durch und erklärte, dass ich das Mentoring im Tandem mit Raphael Hansjosten führen werde. Während eine Whatsappgruppe mit allen Teilnehmer*innen erstellt wurde und die Mentees bereits an der ersten Terminumfrage teilnahmen, kamen weitere Erstsemesterstudierende dem Meeting hinzu. Somit stieg die Gesamtteilnehmerzahl von Raphael und mir auf insgesamt elf.
 
-        Mein Vorgehen, bereits während des Matching die Teilnehmer eine Terminumfrage für das nächste Treffen durchführen zu lassen, funktionierte wie erwartet sehr gut. Ich war mir sicher, dass ich mit der doppelten Gruppengröße gut umgehen kann.
+        Mein Vorgehen, bereits während des Matchings die Teilnehmer eine Terminumfrage für das nächste Treffen durchführen zu lassen, funktionierte wie erwartet sehr gut und führte zu einer hohen Beteiligung. Ich war mir sicher, dass ich mit der doppelten Gruppengröße gut umgehen kann.
 
     \subsection{Offline-Treffen am 4. Oktober 2022}
-        Das erste offline-Treffen fand im Fachschaftsraum EIT statt und ging \SI{120}{\min}. Hier konnten wir uns gegenseitig besser kennelernen und uns über Gesprächsthemen für die zukünftigen Treffen austauschen. Das alles fand im Rahmen eines von der Fachschaft EIT organisierten Grillabends statt. Leider konnte Raphael krankheitsbedingt nicht teilnehmen.
+        Das erste Offline-Treffen fand im Fachschaftsraum EIT statt und ging \SI{120}{\min}. Hier konnten wir uns gegenseitig besser kennelernen und uns über Gesprächsthemen für die zukünftigen Treffen austauschen. Das alles fand im Rahmen eines von der Fachschaft organisierten Grillabends statt. Leider konnte Raphael krankheitsbedingt nicht teilnehmen. Zusätzlich lernten die Mentees die Fachschaft mit all ihren Vorteilen, ihren Mitgliedern und weiteren EIT-Studierenden kennen.
+
+        An dieser Stelle kamen bereits einige Fragen zum Angebot \gquotes{erfolgreich starten} der HKA und ich konnte mein persönliche Einschätzung wiedergeben. Außerdem konnte ich meine Mentees besser kennen lernen und das Eis brechen.
 
     \subsection{Offline-Treffen am 18. Oktober 2022}
-        Dieses Treffen wurde zusammen mit einer weiteren EIT-Mentoren-Gruppe durchgeführt und wurde in zwei Teile geteilt: Im ersten Teil hielten wir Mentoren einen Vortrag mit dem übergeordneten Thema \glqq Organisation von Vorlesungen\grqq über \SI{60}{\min}. Die von mir erstellten Notizen und Handout finden sich im Anhang \ref{app:meeting3}. Im zweiten Teil des Abends verbrachten wir ca. \SI{120}{\min} in einer Bowlingbahn in Karlsruhe.
+        Dieses Treffen wurde zusammen mit einer weiteren EIT-Mentoren-Gruppe durchgeführt und wurde in zwei Teile geteilt: Im ersten Teil hielten wir Mentoren einen Vortrag zum Thema \gquotes{Organisation von Vorlesungen} über \SI{60}{\min}. Die von mir erstellten Notizen und das Handout finden sich im Anhang \ref{sec:appendix}. Den zweiten Teil des Abends verbrachten wir ca. \SI{330}{\min} in einer Bowlingbahn in Karlsruhe. Jedoch blieben nicht alle Mentees solange, sondern beendeten den Abend zu verschiedenen Zeitpunkten
 
-        Hier konnte ich auf Themen wie sinnvolle Zielsetzung für das Studium, Erarbeitung von Teilzielen und deren Planung eingehen. Außerdem konnten die Mentoren ihre eigenen Erfahrungen und Empfehlungen abgeben, wie man Vorlesungen am besten vor- und nachbereitet. So gab es beispielsweise unterschiedliche Meinungen, ob man in jeder Vorlesung den Inhalt mitschreiben sollte oder nicht. Es wurden darüber hinaus Hinweise zur Fachschaft und anderen Dienste für Studierende in Karlsruhe gegeben.
+        Während dem Vortrag konnte ich auf Themen wie sinnvolle Zielsetzung für das Semester, Erarbeitung von Teilzielen und deren Planung eingehen. Außerdem konnten die Mentoren ihre eigenen Erfahrungen und Empfehlungen abgeben, wie man Vorlesungen am besten vor- und nachbereitet. Es wurden darüber hinaus Hinweise zur Fachschaft und anderen Diensten für Studierende in Karlsruhe gegeben.
 
-        Während dem Bowling konnten wir uns mit den Mentees über die vorherigen Punkte weiter austauschen und Hilfestellung zu verschiedenen Themen geben. 
+        An der Bowlingbahn konnten wir uns mit den Mentees über die vorherigen Punkte weiter austauschen und Hilfestellung zu verschiedenen Themen geben. 
 
     \subsection{Offline-Treffen am 9. November 2022}
-        Während der Mittagspause veranstalteten Raphael und ich eine Gesprächsrunde für ca. \SI{60}{\min}. Mit den drei anwesenden Mentees sprachen wir über die Themen aus dem letzten Treffen, unsere Erfahrung mit verschiedenen Dozenten, Prüfungen und unsere Freizeit.
+        Während der Mittagspause veranstalteten Raphael und ich eine Gesprächsrunde für ca. \SI{60}{\min}. Mit drei teilnehmenden Mentees sprachen wir über die Themen aus dem letzten Treffen, unsere Erfahrung mit verschiedenen Dozenten, Prüfungen und unsere Freizeit.
         
-        Es waren nur drei Mentees anwesend, auch aus diesem Grund hatte das gesamte Treffen einen sehr lockeren Rahmen.
+        Aufgrund der geringen Teilnehmerzahl hatte das Treffen eine lockere Atmosphäre.
 
     \subsection{Offline-Treffen am 29. November 2022}
+        An diesem Treffen schloss sich uns erneut eine Tandem-Mentoren-Gruppe an, um die anwesenden Mentees auf ihre bevorstehende Klausurenphase vorzubereiten. Die Veranstaltung ging \SI{90}{\min} und fand abends in einem leeren Hörsaal statt. In dieser Zeit sorgten wir dafür, dass jeder Mentee erfolgreich mit einer TAN seine Prüfungsanmeldung einsehen konnte und behandelten anschließend die Themen Lernplanerstellung, Klausurvorbereitung und den Umgang mit Lernstress. Meine Unterlagen zur Vorbereitung, Präsentation und Handout finden sich im Anhang \ref{sec:appendix}.
+
+        Meiner Meinung nach konnten hier die Informationen weitergegeben werden, die den Mentees am weitreichendsten und langfristig helfen werden. Ich zeigte ihnen auf, dass sie noch acht Wochen bis Klausurbeginn haben und bereits seit zwei Wochen auf die Klausuren lernen sollten. Des Weiteren konnte ich einige Grundgedanken aus der Trainingslehre in das Studium übertragen: 
+        
+        Das Semesterziel der meisten Studenten ist es, die Klausuren zu bestehen. Abhängig von der Anzahl und Art der Klausuren ist eine umfangreiche Vorbereitung und Training notwendig. Um dies zu erreichen, wird das Problem in Teilgebiete unterteilt und nacheinander bearbeitet. Dazu müssen realistische Zwischenziele gesetzt werden und das Handeln muss auf meine Ziele ausgerichtet sein. Falls abzusehen ist, dass gewisse Ziele nicht erreicht werden können, müssen die Ziele angepasst und z.B. eine Klausur geschoben werden. je näher man dem Semesterende kommt und alle Teilgebiete erlernt hat, desto wichtiger wird es, möglichst prüfungsnah zu üben. Dies beinhaltet Umfang, Zeitdruck, äußere Umgebung, Tageszeit, genutzte Hilfsmittel \dots
+
+        Darüber hinaus sprach ich das Thema Lernstress und psychische Erkrankungen grundlegend an. Auch an dieser Stelle haben die anderen Mentoren von eigenen Erfahrungen berichtet und eigene Tipps gegeben.
 
     \subsection{Offline-Treffen am 21. Dezember 2022}
-        Raphael Hansjosten organisierte ein Vorstellungsrunde mit anschließender Fragerunde in Kleingruppen über die Vertiefungsrichtungen unseres Studiengangs über \SI{60}{min}. Er gab allen Studenten, egal ob Mentee oder nicht, die Gelegenheit, von Kommilitonen Eindrücke über die Vertiefungsfächer zu erhalten.
+        Raphael Hansjosten organisierte ein Vorstellungsrunde mit anschließender Fragerunde in Kleingruppen über die Vertiefungsrichtungen unseres Studiengangs über \SI{60}{min}. Er gab allen Studenten im Grundstudium -- egal ob Mentee oder nicht -- die Gelegenheit, von Kommilitonen Eindrücke über die Vertiefungsfächer zu erhalten. Auch ich konnte von dieser Veranstaltung profitieren. Dafür danke ich ihm sehr.
 
 \section{Ausblick}
+    In der Zukunft sind zwei weitere Treffen geplant, ihr Inhalt und der geplante Zeitraum werden nun kurz skizziert.
 
     \subsection{Geplantes Treffen im Januar 2023}
-        drei Wochen vor der Prüfungsphase soll das Nächste Treffen stattfinden. Hier möchten wir unseren Mentees die Gelegenheit bieten, über Ihre Erfahrungen und Probleme während der Klausurvorbereitung zu berichten und Rat einzuholen. Außerdem können Raphael und ich individuelle Hilfestellung geben, unter Welchen Umständen, zu welchen Zeitpunkt, wie viele und welche Klausuren geschoben werden sollten. 
+        Das vorletzte Mentoringtreffen wird kurz vor der Prüfungsphase stattfinden. Vermutlich wird es hauptsächlich darum gehen, die Sorgen der Mentees zu beseitigen und Hilfestellung bei Frust, Unsicherheit und Überforderung zu geben. 
+        
+        Doch ich bin mir sicher, dass wir unsere Mentee gut auf diese Zeit vorbereitet haben und sie die Phase meistern werden. Die meisten von ihnen sind sehr engagiert in verschiedenen Hochschulbereichen und wirken auf mich äußerst motiviert. 
 
     \subsection{Geplantes Treffen im Februar 2023}
-
+        Abschließend wird es im Februar ein Reflexionsgespräch zwischen den Mentees, Raphael und mir geben. Womöglich wird auch das Ende der ersten Klausurenphase ein wenig gefeiert. Und auch an dieser Stelle können Raphael und ich Hilfestellung geben, wenn ein Mentee eine Klausur nicht bestanden hat. 
+        
+        Ich bin bereits gespannt darauf, ihr ehrliches Feedback zu hören und zu erfahren, ob unsere Mentoringarbeit einen spürbaren Einfluss auf sie hatte. Davon ausgehend kann ich meinen Anteil der Mentoringtreffen besser reflektieren und Stellschrauben zum Verbessern finden. Falls ich im nächsten Semester erneut Mentor sein möchte, wäre dies natürlich äußerst hilfreich für mich und meine zukünftigen Mentees. 
+        
 \section{Abschließende Reflexion}
 
-    gesamtdauer aller treffen
+    In Tabelle \ref{tab:time} sind die einzelnen Mentoringtreffen und die Gesamtdauer aufgelistet. 
+    
+    % Raphael und ich führten mehr Treffen als gefordert durch. 
+    % Denn es kam mehrmals vor, dass wir der Meinung waren, ein weiteres Thema sollte unbedingt behandelt werden 
+    % Raphael und ich haben die Vorgabe, mindestens fünf Treffen je \SI{90}{\min} durchzuführen, übertroffen. 
+
+    anwesenheit bei 9-11, ausnahme treffen 4. wenn zusammenschluss mit zweiter gruppe, dann knapp 20 Erstsemesterstudierende.
+
+    \begin{table}[htb]
+        \centering
+        \caption{Dauer der Mentorentreffen}
+        \label{tab:time}
+        \begin{tabular}{lcr}\toprule
+            Treffen &   Datum           &   Zeit\\\midrule
+            1       &   29.09.2022      &   \SI{30}{\minute}\\
+            2       &   04.10.2022      &   \SI{120}{\minute}\\
+            3       &   18.10.2022      &   \SI{390}{\minute}\\
+            4       &   09.11.2022      &   \SI{60}{\minute}\\
+            5       &   29.11.2022      &   \SI{90}{\minute}\\
+            6       &   21.12.2022      &   \SI{60}{\minute}\\
+            7       &   (20.01.2023)    &   \SI{60}{\minute}\\
+            8       &   (10.02.2023)    &   \SI{60}{\minute}\\
+            \addlinespace
+            \multicolumn{2}{l}{gesamt}  &   \SI{810}{\minute}\\\bottomrule
+        \end{tabular}
+        \vspace{0.5em}
+        \legend{Die letzten beiden Treffen haben noch nicht stattgefunden und sind daher als Richtwert anzusehen.}
+    \end{table}
+
+    Insgesamt hat mir die Mentoringarbeit viel Freude bereitet. Aufgrund meiner außerstudentischen Erfahrung viel es mir leicht, die Treffen vorzubereiten und zu organisieren. 
+    
+    Raphaels Input war viel Wert  und ich hatte viel Spaß mit ihm. 
+
+    Sich mit einer weiteren Gruppe zusammen zu schließen hatte viele Vorteile. Die Mentees erhielten Informationen zu theoretischen Themen sehr kompakt und sahen verschiedene Ansichten von den vier Mentoren.
+    es wurden mehr mentees erreicht mit wichtigen informationen über theoretische tipps
 
     Mentoringbericht Abgabe vor letztem treffen. vor ehrlichen Feedback der Mentees
 
@@ -126,17 +179,25 @@
 
     Reflexionsgespräch leider online
 
-    wenige nachfragen der mentees. einzelnes feedback von: froh, dass jan mein mentor ist. ihr gebt euch richtig mühe. man merkt, wie viel aufwand und gedanken ihr euch für die mentoringtreffen macht.
+    es war toll zu sehen, wie sich unsere erstsemester einleben. eine große mehrheit unserer mentoren ist inzwischen in der fachschaft aktiv und vernetzt sich mit studierenden aus allen semestern. 
+    ich habe fest vor, mit meinen mentees und mit Raphael regelmäßig in kontakt zu bleiben.
+
+    ich hoffe, das möglichst viele mentees ihr studium fortsetzen werden.
+
+    wenige nachfragen der mentees. einzelnes feedback von: froh, dass jan mein mentor ist. ihr gebt euch richtig mühe. man merkt, wie viel aufwand und Gedanken ihr euch für die mentoringtreffen macht.
 
 \appendix
 
+\clearpage
+\newpage
+
 \section{Unterlagen zu den Mentorentreffen}
-    \label{sec:app}
+    \label{sec:appendix}
     
     \includepdf[pages={1-2}]{treffen-3-ws22.pdf}
-    \label{app:meeting3}
+    % \label{app:meeting3}
 
     \includepdf[pages={1-3}]{treffen-4-ws22.pdf}
-    \label{app:meeting4}
+    % \label{app:meeting4}
 
 \end{document}
